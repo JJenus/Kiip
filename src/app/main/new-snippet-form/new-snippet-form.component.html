@@ -26,7 +26,17 @@
         </div>
         <div>
           <label for="tags">Tags (optional)</label>
-            <input ngModel name="tags" type="text" class="form-control " id="kt_tagify_2" placeholder="">
+          <tagify name="tags" inputClass="form-control"
+            [(ngModel)]="tags"
+            inputClass="form-control"
+            [settings]="settings"
+            [whitelist]="whitelist$"
+            [readonly]="readonly"
+            (add)="onAdd($event)"
+            (remove)="onRemove($event)"
+          >
+            
+          </tagify>
         </div>
         <div class="form-group">
           <label for="description">Description</label>
@@ -34,7 +44,7 @@
         </div>
         <div class="form-group">
           <label for="snippet">Snippet</label>
-          <textarea required ngModel name="snippet" class="form-control " id="snippet" rows="5"></textarea>
+          <textarea [highlight]="newSnippet.value.snippet" required ngModel name="snippet" class="form-control " id="snippet" rows="5"></textarea>
         </div>
         <div class="form-check form-check-info text-left">
           <input  ngModel name="makePublic" class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked="">

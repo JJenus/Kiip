@@ -11,6 +11,8 @@ import { NewSnippetFormComponent } from './main/new-snippet-form/new-snippet-for
 import { FormsModule } from '@angular/forms';
 import { HighlightModule, HIGHLIGHT_OPTIONS, HighlightOptions} from 'ngx-highlightjs';
 import { CodeSnippetComponent } from './main/code-snippet/code-snippet.component';
+import { TagifyModule } from 'ngx-tagify';
+import { AuthComponent } from './auth/auth.component';
 
 @NgModule({
   declarations: [
@@ -19,14 +21,16 @@ import { CodeSnippetComponent } from './main/code-snippet/code-snippet.component
     NavbarComponent,
     FooterComponent,
     NewSnippetFormComponent,
-    CodeSnippetComponent
+    CodeSnippetComponent,
+    AuthComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HighlightModule
+    HighlightModule,
+    TagifyModule.forRoot()
   ],
   providers: [
     HttpClient,

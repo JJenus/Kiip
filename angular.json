@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Kiip2": {
+    "kiip": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,17 +17,18 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/kiip2",
+            "outputPath": "dist/kiip",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "styles": [
-              "src/styles.css",
+              "src/style.scss",
               "src/assets/css/argon-dashboard.min.css",
               "src/assets/css/nucleo-svg.css",
-              "src/assets/css/nucleo-icons.css"
-
+              "src/assets/css/nucleo-icons.css",
+              "node_modules/ngx-tagify/styles/tagify.scss",
+              "src/styles.css"
             ],
             "scripts": [
               "src/assets/js/core/popper.min.js",
@@ -78,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "Kiip2:build:production"
+              "browserTarget": "kiip:build:production"
             },
             "development": {
-              "browserTarget": "Kiip2:build:development"
+              "browserTarget": "kiip:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Kiip2:build"
+            "browserTarget": "kiip:build"
           }
         },
         "test": {
@@ -112,5 +113,5 @@
       }
     }
   },
-  "defaultProject": "Kiip2"
+  "defaultProject": "kiip"
 }

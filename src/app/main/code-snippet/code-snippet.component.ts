@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { HighlightAutoResult , HighlightJS, HighlightModule} from 'ngx-highlightjs';
 
 @Component({
   selector: 'app-code-snippet',
@@ -8,7 +7,7 @@ import { HighlightAutoResult , HighlightJS, HighlightModule} from 'ngx-highlight
 })
 export class CodeSnippetComponent implements OnInit {
   @Input() snippet:any;
-  public language: any[] = ["java", "javascript", "html"]
+  
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3 navbar-transparent mt-4">
+<nav class="navbar navbar-expand-lg position-absolute top-0 z-index-3 w-100 shadow-none my-3 navbar-light">
     <div class="container">
       <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 text-white" href="">
         <img src="/assets/img/app-logos/kiip-line.png" style="height: 100px;" class="img-fluid" alt="kiiip logo">
@@ -14,19 +14,13 @@
       <div class="collapse navbar-collapse" id="navigation">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item">
-            <a class="nav-link me-2" href="">
+            <a routerLink="/profile" class="nav-link me-2" href="">
               <i class="fa fa-user opacity-6  me-1"></i>
               Profile
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link me-2" href="">
-              <i class="fas fa-user-circle opacity-6  me-1"></i>
-              Sign Up
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link me-2" href="">
+            <a routerLink="/signin" class="nav-link me-2" href="">
               <i class="fas fa-key opacity-6  me-1"></i>
               Sign In
             </a>
@@ -34,7 +28,9 @@
         </ul>
         <ul class="navbar-nav p-3">
           <li class="nav-item">
-            <a href="https://www.creative-tim.com/product/argon-dashboard" class="btn btn-sm mb-0 me-1 bg-gradient-light">logout</a>
+            <a routerLink="/logout" class="btn btn-sm mb-0 me-1 bg-gradient-light">logout</a>
+
+            <a href="https://www.creative-tim.com/product/argon-dashboard" class="btn d-none btn-sm mb-0 me-1 bg-gradient-light">logout</a>
           </li>
         </ul>
       </div>

@@ -1,11 +1,11 @@
 .max-h{
     max-height: 50vh !important;
-    min-height: 50vh !important;
+    min-height: 15vh !important;
 }
 
 @media (min-width: 571) {
     .max-h{
+        min-height: 20vh !important;
         max-height: 40vh !important;
-        min-height: 40vh !important;
     }
 }
